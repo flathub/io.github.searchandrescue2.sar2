@@ -1,82 +1,108 @@
-From 9e09b244c2642e2417583488c7ccc95e84b9c46d Mon Sep 17 00:00:00 2001
+From f02c32fc84bc571cb5e6c068ef736b7660bb131e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
- <matthias.mailaender@lablicate.com>
-Date: Thu, 27 Jul 2023 19:35:58 +0200
-Subject: [PATCH 1/3] Add releases.
+Date: Mon, 12 May 2025 18:44:45 +0200
+Subject: [PATCH 1/4] Add developer.
 
 ---
- extra/sar2.appdata.xml | 20 ++++++++++++++++++++
- 1 file changed, 20 insertions(+)
+ extra/sar2.appdata.xml | 3 +++
+ 1 file changed, 3 insertions(+)
 
 diff --git a/extra/sar2.appdata.xml b/extra/sar2.appdata.xml
-index 482a258..104f3de 100644
+index 1081d4c..9c159df 100644
 --- a/extra/sar2.appdata.xml
 +++ b/extra/sar2.appdata.xml
-@@ -30,5 +30,25 @@
+@@ -5,6 +5,9 @@
+   <project_license>GPL-2.0</project_license>
+   <name>Search and Rescue II</name>
+   <summary>Rescue Helicopter Simulator</summary>
++  <developer id="io.github.searchandrescue2">
++    <name>SAR2 developers</name>
++  </developer>
+   <description>
+     <p>
+       Search and Rescue II is a rescue helicopter simulator for Linux.
+
+From bc0e6d1699d5da6b964f54401a5f62f2f43d161a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Mon, 12 May 2025 18:45:09 +0200
+Subject: [PATCH 2/4] Add captions to screenshot.
+
+---
+ extra/sar2.appdata.xml | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/extra/sar2.appdata.xml b/extra/sar2.appdata.xml
+index 9c159df..0aff6e5 100644
+--- a/extra/sar2.appdata.xml
++++ b/extra/sar2.appdata.xml
+@@ -19,18 +19,23 @@
+   <screenshots>
+     <screenshot type="default">
+       <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar1.jpg</image>
++      <caption>Burning skyscrapers</caption>
+     </screenshot>
+     <screenshot>
+       <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar2.jpg</image>
++      <caption>Forest fires</caption>
+     </screenshot>
+     <screenshot>
+       <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar3.jpg</image>
++      <caption>Mountain top</caption>
+     </screenshot>
+     <screenshot>
+       <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar4.jpg</image>
++      <caption>Coast guard</caption>
+     </screenshot>
+     <screenshot>
        <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar5.jpg</image>
++      <caption>Fighter jet</caption>
      </screenshot>
    </screenshots>
-+  <releases>
-+    <release version="v2.5.0" date="2020-06-20" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.5.0</url>
-+    </release>
-+    <release version="v2.4.3" date="2020-05-23" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.4.3</url>
-+    </release>
-+    <release version="v2.4.2" date="2020-05-16" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.4.2</url>
-+    </release>
-+    <release version="v2.4.0" date="2020-04-26" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.4.0</url>
-+    </release>
-+    <release version="v2.3.3" date="2017-07-15" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.3.3</url>
-+    </release>
-+    <release version="v2.3.2" date="2016-12-22" type="stable">
-+      <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.3.2</url>
-+    </release>
-+  </releases>
-   <url type="homepage">https://searchandrescue2.github.io/sar2/</url>
- </component>
+   <releases>
 
-From f78a7ddb78fc0e4fcfb2f478a40f8886fb9ca347 Mon Sep 17 00:00:00 2001
+From 2eb869c43689c214763a8227a9971472f0cadd5a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
- <matthias.mailaender@lablicate.com>
-Date: Thu, 27 Jul 2023 19:36:07 +0200
-Subject: [PATCH 2/3] Link bug tracker.
+Date: Mon, 12 May 2025 18:45:36 +0200
+Subject: [PATCH 3/4] and add sixth screenshot from website.
+
+---
+ extra/sar2.appdata.xml | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/extra/sar2.appdata.xml b/extra/sar2.appdata.xml
+index 0aff6e5..35a8f59 100644
+--- a/extra/sar2.appdata.xml
++++ b/extra/sar2.appdata.xml
+@@ -37,6 +37,10 @@
+       <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar5.jpg</image>
+       <caption>Fighter jet</caption>
+     </screenshot>
++    <screenshot>
++      <image>https://searchandrescue2.github.io/sar2/images/screenshots/sar6.jpg</image>
++      <caption>Rescue basket</caption>
++    </screenshot>
+   </screenshots>
+   <releases>
+     <release version="v2.6.0" date="2023-08-11" type="stable">
+
+From 20b54b8de912e365bf3553b83b87921ed63993fb Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Mon, 12 May 2025 18:45:41 +0200
+Subject: [PATCH 4/4] Add launchable.
 
 ---
  extra/sar2.appdata.xml | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/extra/sar2.appdata.xml b/extra/sar2.appdata.xml
-index 104f3de..9eadc4c 100644
+index 35a8f59..671a52e 100644
 --- a/extra/sar2.appdata.xml
 +++ b/extra/sar2.appdata.xml
-@@ -51,4 +51,5 @@
+@@ -65,6 +65,7 @@
+       <url>https://github.com/SearchAndRescue2/sar2/releases/tag/v2.3.2</url>
      </release>
    </releases>
-   <url type="homepage">https://searchandrescue2.github.io/sar2/</url>
-+  <url type="bugtracker">https://github.com/SearchAndRescue2/sar2/issues</url>
- </component>
-
-From 674cf0cd03e06a7d3cb2173740db37ea1861a0be Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
- <matthias.mailaender@lablicate.com>
-Date: Thu, 27 Jul 2023 19:36:17 +0200
-Subject: [PATCH 3/3] Add Open Age Content Rating.
-
----
- extra/sar2.appdata.xml | 1 +
- 1 file changed, 1 insertion(+)
-
-diff --git a/extra/sar2.appdata.xml b/extra/sar2.appdata.xml
-index 9eadc4c..18104d1 100644
---- a/extra/sar2.appdata.xml
-+++ b/extra/sar2.appdata.xml
-@@ -52,4 +52,5 @@
-   </releases>
++  <launchable type="desktop-id">sar2.desktop</launchable>
    <url type="homepage">https://searchandrescue2.github.io/sar2/</url>
    <url type="bugtracker">https://github.com/SearchAndRescue2/sar2/issues</url>
-+  <content_rating type="oars-1.1"/>
- </component>
+   <content_rating type="oars-1.1"/>
