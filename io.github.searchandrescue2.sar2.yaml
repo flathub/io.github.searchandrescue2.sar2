@@ -1,6 +1,6 @@
 id: io.github.searchandrescue2.sar2
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: sar2
 rename-icon: sar2
