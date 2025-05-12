@@ -66,5 +66,8 @@ modules:
       url: https://github.com/SearchAndRescue2/sar2.git
       tag: v2.6.0
       commit: c0bc6c692946f0ce3ab2acdbc03b06112df36b8e
+      x-checker-data:
+        type: git
+        tag-pattern: ^v([\d.]+)$
     - type: patch
       path: appstream.patch
