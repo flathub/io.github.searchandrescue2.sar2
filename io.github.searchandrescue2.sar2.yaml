@@ -1,6 +1,6 @@
 id: io.github.searchandrescue2.sar2
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: sar2
 rename-icon: sar2
@@ -12,6 +12,12 @@ finish-args:
   - --device=all # dri and joysticks
   - --socket=pulseaudio
   - --env=SAR2_DATA=/app/share/sar2
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/doc
+  - '*.la'
+  - '*.a'
 
 modules:
   - name: scons
@@ -35,11 +41,6 @@ modules:
         url: https://github.com/vancegroup/freealut.git
         tag: freealut_1_1_0
         commit: 570dea5b77493cc9ce0b84f6a0a2ee31ed0b2c73
-    cleanup:
-      - /include
-      - /lib/pkgconfig
-      - /lib/*.a
-      - /lib/*.la
 
   - name: xmu
     sources:
@@ -59,9 +60,9 @@ modules:
       - mkdir -p ${FLATPAK_DEST}/share/sar2/
       - cp -ar data/* ${FLATPAK_DEST}/share/sar2/
       - install -Dm755 bin/sar2 -t ${FLATPAK_DEST}/bin
-      - install -D -m 0644 extra/sar2.desktop ${FLATPAK_DEST}/share/applications/sar2.desktop
-      - install -D -m 0644 extra/sar2.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/sar2.png
-      - install -D -m 0644 extra/sar2.appdata.xml ${FLATPAK_DEST}/share/appdata/sar2.appdata.xml
+      - install -D -m 0644 extra/sar2.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -D -m 0644 extra/sar2.png -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/
+      - install -D -m 0644 extra/sar2.appdata.xml -t ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: git
         url: https://github.com/SearchAndRescue2/sar2.git
